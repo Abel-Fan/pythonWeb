@@ -1,0 +1,774 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>python基础语法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="前端开发.html" />
+    
+    
+    <link rel="prev" href="mysql安装.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="概述.html">
+            
+                <a href="概述.html">
+            
+                    
+                    课程概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="pythonweb01.html">
+            
+                <a href="pythonweb01.html">
+            
+                    
+                    课程大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="python环境搭建.html">
+            
+                <a href="python环境搭建.html">
+            
+                    
+                    Python环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="pycharm软件安装.html">
+            
+                <a href="pycharm软件安装.html">
+            
+                    
+                    pycharm软件安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="mysql安装.html">
+            
+                <a href="mysql安装.html">
+            
+                    
+                    mysql安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="python基础语法.html">
+            
+                <a href="python基础语法.html">
+            
+                    
+                    python基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="前端开发.html">
+            
+                <a href="前端开发.html">
+            
+                    
+                    前端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >python基础语法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x5F00;&#x542F;&#x865A;&#x62DF;&#x73AF;&#x5883;">&#x5F00;&#x542F;&#x865A;&#x62DF;&#x73AF;&#x5883;</h3>
+<p>&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x73AF;&#x5883;</p>
+<pre><code>python -m vuev [tutorial-env]
+</code></pre><p>&#x8FD0;&#x884C;&#x865A;&#x62DF;&#x73AF;&#x5883;</p>
+<pre><code>[tutorial-env]\Scripts\activate.bat
+</code></pre><h3 id="&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x57FA;&#x672C;&#x64CD;&#x4F5C;">&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x57FA;&#x672C;&#x64CD;&#x4F5C;</h3>
+<ol>
+<li>&#x4E0B;&#x8F7D;&#x5305;<pre><code>pip install novas
+pip install requests ==2.6.0 &#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7248;&#x672C;
+</code></pre></li>
+<li>&#x5378;&#x8F7D;&#x5305;<pre><code>pip uninstall novas
+</code></pre></li>
+<li>&#x663E;&#x793A;&#x5305;&#x4FE1;&#x606F;<pre><code>pip show flask
+</code></pre></li>
+<li>&#x5C06;&#x5305;&#x5217;&#x8868;&#x8F93;&#x51FA;&#x5230;requirements.txt&#x4E2D;&#xFF0C;&#x65B9;&#x4FBF;&#x7EDF;&#x4E00;&#x4E0B;&#x8F7D;<pre><code>pip freeeze &gt; requirements.txt
+</code></pre><h3 id="&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;">&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</h3>
+</li>
+<li>&#x8F93;&#x5165;<pre><code>input(&quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x540D;&#x5B57;&#xFF1F;&quot;)
+</code></pre><blockquote>
+<p>input()&#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x7A0B;&#x5E8F;&#x4E0E;&#x7528;&#x6237;&#x7684;&#x4EA4;&#x4E92;&#x529F;&#x80FD;&#xFF0C;input&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</p>
+</blockquote>
+</li>
+<li>&#x8F93;&#x51FA;<pre><code>print(&apos;&#x5C71;&#x897F;&#x4F18;&#x9038;&#x5BA2;&apos;)
+print(&apos;&#x5C71;&#x897F;&#x4F18;&#x9038;&#x5BA2;&apos;,&apos;PythonWeb&apos;,1+1)
+print(&apos;&#x5C71;&#x897F;&#x4F18;&#x9038;&#x5BA2;&apos;,end=&quot;\n&quot;)
+</code></pre><blockquote>
+<p>print()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#x8868;&#x8FBE;&#x5F0F;&#x3002;<br>end&#x53C2;&#x6570; &#x9ED8;&#x8BA4;&#x4E3A;\n &#x6BCF;&#x6B21;print&#x540E;&#x4F1A;&#x5728;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x6700;&#x540E;&#x6362;&#x884C;</p>
+<h3 id="&#x53D8;&#x91CF;">&#x53D8;&#x91CF;</h3>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x5185;&#x5B58;&#x50A8;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x5BB9;&#x5668;</p>
+<h5 id="&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x8D4B;&#x503C;&#x8BED;&#x6CD5;">&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x8D4B;&#x503C;&#x8BED;&#x6CD5;</h5>
+</blockquote>
+</li>
+<li>&#x666E;&#x901A;&#x8D4B;&#x503C;<pre><code>a=1
+</code></pre></li>
+<li>&#x94FE;&#x5F0F;&#x8D4B;&#x503C;<pre><code>a=b=c=1
+</code></pre></li>
+<li>&#x591A;&#x5143;&#x8D4B;&#x503C;<pre><code>x,y=1,2
+</code></pre><h5 id="&#x53D8;&#x91CF;&#x547D;&#x540D;&#x7279;&#x70B9;">&#x53D8;&#x91CF;&#x547D;&#x540D;&#x7279;&#x70B9;</h5>
+</li>
+<li>&#x53D8;&#x91CF;&#x540D;&#x4E0D;&#x53EF;&#x4EE5;&#x662F;&#x5173;&#x952E;&#x5B57;&#x548C;&#x4FDD;&#x7559;&#x5B57;</li>
+<li>&#x53D8;&#x91CF;&#x540D;&#x53EF;&#x4EE5;&#x7531;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#xFF0C;&#x6570;&#x5B57;&#x4E0D;&#x5F00;&#x5934;</li>
+<li>&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x4F8B;&#x5982; &#xFF01; @ % $<h5 id="&#x53D8;&#x91CF;&#x7279;&#x6027;">&#x53D8;&#x91CF;&#x7279;&#x6027;</h5>
+</li>
+<li>&#x4E0D;&#x652F;&#x6301;&#x81EA;&#x589E;&#x81EA;&#x51CF;</li>
+<li>&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+</ol>
+<h3 id="&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<p>python&#x5E38;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5206;&#x4E3A;&#xFF1A;bool int float str None list tuple dict set</p>
+<h3 id="&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<h4 id="1-&#x6570;&#x5B57;&#x7C7B;&#x578B;">1. &#x6570;&#x5B57;&#x7C7B;&#x578B;</h4>
+<pre><code>* &#x6574;&#x6570; int
+* &#x6D6E;&#x70B9;&#x6570; float
+* 0b&#x4E8C;&#x8FDB;&#x5236;
+* 0o&#x516B;&#x8FDB;&#x5236;
+* 0x&#x5341;&#x516D;&#x8FDB;&#x5236;
+* 3e2 &#x79D1;&#x5B66;&#x8BA1;&#x6570;&#x6CD5;
+</code></pre><h4 id="2-&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;-str">2. &#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B; str</h4>
+<pre><code>* &#x5B57;&#x7B26;&#x7F16;&#x7801;&#xFF1A;ASCII GBK GB2312 UTF-8 unicode
+* &#x5B57;&#x7B26;&#x4E32;&#x5B9A;&#x4E49;:&apos;&apos; &quot;&quot;  &apos;&apos;&apos; &apos;&apos;&apos;  &quot;&quot;&quot; &quot;&quot;&quot;
+* &#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF1A;\&apos;  \&quot;  \\   \t&#x5236;&#x8868;&#x7B26;    \r&#x56DE;&#x8F66;    \n&#x6362;&#x884C;
+* &#x524D;&#x7F00; r&quot;abc&quot;&#x53D6;&#x6D88;&#x8F6C;&#x4E49;  u&quot;abc&quot;   b&quot;abc&quot;&#x517C;&#x5BB9;&#x6027;&#x5904;&#x7406;  f&quot;abc&quot;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;
+</code></pre><h6 id="&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;">&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;</h6>
+<pre><code class="lang-python">name=<span class="hljs-string">&quot;&#x5C0F;&#x767D;&quot;</span>
+print(f<span class="hljs-string">&quot;{name}&#x4F60;&#x597D;&quot;</span>)
+print(<span class="hljs-string">&quot;%s&#x4F60;&#x597D;&quot;</span>%name) <span class="hljs-comment"># %s str</span>
+print(<span class="hljs-string">&quot;&#x6211;&#x6709;%d&#x4E2A;&#x624B;&#x673A;&quot;</span>%<span class="hljs-number">10</span>) <span class="hljs-comment">#%d &#x6574;&#x578B;</span>
+print(<span class="hljs-string">&quot;day%2d&quot;</span>%<span class="hljs-number">10</span>)
+print(<span class="hljs-string">&quot;day%2d&quot;</span>%<span class="hljs-number">1</span>)
+print(<span class="hljs-string">&quot;&#x4EF7;&#x683C;&#x4E3A;%0.2f&#x5143;&quot;</span>%<span class="hljs-number">10</span>)
+print(<span class="hljs-string">&quot;%s&#x60A8;&#x597D;,&#x8FD9;&#x91CC;&#x6709;%d&#x4E2A;&#x624B;&#x673A;&#xFF0C;&#x4E00;&#x5171;&#x4EF7;&#x503C;%0.2f&#x5143;&quot;</span>%(<span class="hljs-string">&quot;&#x5C0F;&#x767D;&quot;</span>&#xFF0C;<span class="hljs-number">10</span>,<span class="hljs-number">10000</span>))
+</code></pre>
+<h6 id="&#x5B57;&#x7B26;&#x4E32;&#x8BBF;&#x95EE;">&#x5B57;&#x7B26;&#x4E32;&#x8BBF;&#x95EE;</h6>
+<pre><code>str1[index] index&#x53EF;&#x4EE5;&#x4E3A;&#x8D1F;
+</code></pre><h5 id="&#x5207;&#x7247;">&#x5207;&#x7247;</h5>
+<pre><code>&#x8BED;&#x6CD5; &quot;abcdef&quot;[start:end:step]
+start &#x5F00;&#x59CB;&#x7684;&#x4E0B;&#x6807;&#xFF0C;&#x9ED8;&#x8BA4; 0
+end &#x7ED3;&#x675F;&#x524D;&#x7684;&#x4E0B;&#x6807;&#xFF0C;&#x9ED8;&#x8BA4; Length
+step &#x6B65;&#x8FDB;&#x503C; &#x53EF;&#x6709;&#x53EF;&#x65E0; &#x9ED8;&#x8BA4;1
+str1=&quot;&#x5C71;&#x897F;&#x4F18;&#x9038;&#x5BA2;&#x79D1;&#x6280;&#x6709;&#x9650;&#x516C;&#x53F8;&quot;
+print(str1[2:5:1])
+print(str1[::])
+print(str1[-5:-1])
+print(str1[-1:-5:-1])
+&#x8D1F;&#x53F7;&#x4EE3;&#x8868;&#x9006;&#x5411;
+</code></pre><h4 id="3-none">3. None</h4>
+<h5 id="bool-true-false">bool True False</h5>
+<h4 id="4-&#x5217;&#x8868;">4. &#x5217;&#x8868;</h4>
+<pre><code>arr=[]
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x7A7A;&#x5217;&#x8868;</li>
+<li>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5217;&#x8868;</li>
+<li>&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7C7B;&#x578B;
+```
+arr=[]
+arr.append()#&#x672B;&#x4F4D;&#x6DFB;&#x52A0;
+arr.append(&quot;abc&quot;)
+arr.insert(0,&quot;123&quot;)#&#x9009;&#x62E9;&#x4F4D;&#x7F6E;
+print(arr)
+arr[index] #&#x4FEE;&#x6539;
+arr[index] #&#x5220;&#x9664;
+arr=[1,2,3,4]</li>
+</ol>
+<p>arr.remove(1)#&#x5220;&#x9664;&#x5143;&#x7D20;</p>
+<p>arr.pop(0)#&#x5220;&#x9664;&#x4E0B;&#x6807;</p>
+<p>arr.clear()#&#x6E05;&#x7A7A;</p>
+<p>del arr[0]</p>
+<pre><code>&#x6253;&#x5370;print(dir(arr))
+
+#### 5. &#x5143;&#x7EC4;
+t1=()
+&#x6CE8;&#x610F;&#xFF1A;  
+1. &#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x6CA1;&#x6709;&#x5143;&#x7D20;&#x7684;&#x5143;&#x7EC4;
+2. &#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5143;&#x7EC4;(1,)
+3. &#x5143;&#x7EC4;&#x662F;&#x4E0D;&#x53EF;&#x6539;&#x53D8;&#x7684;&#x5217;&#x8868;
+#### 6. &#x5B57;&#x5178; dict
+</code></pre><p>d1={&apos;name&apos;:&apos;xb&apos;,&apos;age&apos;:19}
+name=&apos;name1&apos;
+d1={name:&apos;xb&apos;,&apos;age&apos;:19}
+print(d1)</p>
+<pre><code>&#x6CE8;&#x610F;&#xFF1A;  
+1. &#x5B57;&#x5178;&#x7684;&#x952E;&#x503C;&#x662F;&#x6CA1;&#x6709;&#x987A;&#x5E8F;&#x7684;
+2. &#x5B57;&#x5178;&#x7684;&#x952E;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x91CF;&#xFF08;&#x6570;&#x5B57;&#x7C7B;&#x578B; &#x5B57;&#x7B26;&#x4E32; None True False &#xFF09;
+## &#x5B57;&#x5178;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;
+&#x589E;
+</code></pre><p>d1={&apos;name&apos;:&apos;xb&apos;,&apos;age&apos;:19}
+d1[&apos;sex&apos;]=&apos;&#x7537;&apos;</p>
+<p>d1.update({&apos;sex&apos;:&apos;&#x7537;&apos;})</p>
+<pre><code>&#x5220;&#x9664;
+</code></pre><p>d1.pop(&apos;name&apos;)
+di.popitem()#&#x672B;&#x4F4D;&#x5220;&#x9664;
+del d1[&apos;name&apos;]</p>
+<pre><code>&#x4FEE;&#x6539;
+</code></pre><p>d1[&apos;name&apos;]=&quot;&quot;</p>
+<pre><code>&#x8BBF;&#x95EE;
+</code></pre><p>print(d1[&apos;name&apos;])
+d1.get(&apos;sex&apos;,&apos;&#x6682;&#x65E0;&apos;)</p>
+<pre><code>
+#### 7. &#x96C6;&#x5408; set
+s={1,2,3,4,5,6}
+&#x6CE8;&#x610F;&#xFF1A;
+1. &#x96C6;&#x5408;&#x662F;&#x4E0D;&#x91CD;&#x590D;&#x7684;
+
+##### &#x96C6;&#x5408;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;
+1. &#x589E;&#x52A0;
+</code></pre><p>s={1,2,3,4,5}
+s.update({7,8,9})
+s.update(&quot;afdsa&quot;)
+s.update([&apos;aa&apos;,&apos;bb&apos;])
+s.add(77)
+print(s)</p>
+<pre><code>2. &#x5220;&#x9664;
+</code></pre><p>s={1,2,3,4,5,6}
+s.pop #&#x9996;&#x4F4D;&#x5220;&#x9664;
+s.remove(2)
+s.clear()
+print(s)</p>
+<pre><code>3. &#x4EA4;&#x96C6;&#x3001;&#x5E76;&#x96C6;&#x3001;&#x8865;&#x96C6;
+    * &#x4EA4;&#x96C6;
+</code></pre><pre><code>    print(s&amp;s1)
+    ```
+* &#x5E76;&#x96C6;
+    ```
+    print(s|s1)
+    ```
+* &#x8865;&#x96C6;
+    ```
+    print(s^s1)
+    ```
+</code></pre><h5 id="int-float-bool-none-list-tuole-dict-set">int float bool None list tuole dict set</h5>
+<h5 id="&#x53EF;&#x53D8;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;list-dict-set">&#x53EF;&#x53D8;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;list dict set</h5>
+<h4 id="&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x7C7B;&#x578B;</h4>
+<pre><code>type()
+</code></pre><h4 id="&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;">&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</h4>
+<pre><code>int()
+float()
+str()
+bool()
+dict()
+set()
+tuple()
+</code></pre><h2 id="&#x8FD0;&#x7B97;&#x7B26;">&#x8FD0;&#x7B97;&#x7B26;</h2>
+<h3 id="&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;">&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<pre><code>+ - * / %
+
+//&#x53D6;&#x6574; **&#x5E42;&#x8FD0;&#x7B97;
+
++ &#x53EF;&#x4EE5;&#x8FDE;&#x63A5; &#x5B57;&#x7B26;&#x4E32; &#x5217;&#x8868;&#x5143;&#x7EC4;
+* &#x91CD;&#x590D; &#x5B57;&#x7B26;&#x4E32; &#x5217;&#x8868; &#x5143;&#x7EC4;
+print(&quot;abc&quot;+&quot;bcd&quot;)
+print([1,2,3]+[4,5,6])
+print((1,2,3)+(4,5,6))
+print(&quot;abc&quot;*3)
+print([1,2,3]*3)
+print((1,2,3)*3)
+
+/ &#x7ED3;&#x679C;&#x4E3A;float
+print(10/2)
+//
+print(10//3) #&#x5411;&#x4E0B;&#x53D6;&#x6574;
+
+** &#x5E42;&#x8FD0;&#x7B97;
+print(2**10)
+</code></pre><h6 id="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;">&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h6>
+<pre><code>= += -= *= /= %= //= **=
+</code></pre><h6 id="&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;">&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;</h6>
+<pre><code>&gt; &gt;= &lt; &lt;= == !=
+
+not in in#&#x5305;&#x542B;   
+is/is not #&#x662F;&#x5426;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;
+</code></pre><h6 id="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;">&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h6>
+<pre><code>and or not
+&#x4E25;&#x683C;&#x9075;&#x5FAA;&#x77ED;&#x8DEF;&#x539F;&#x5219;
+</code></pre><h6 id="&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;">&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;</h6>
+<pre><code>print(&quot;1&gt;2&quot;) if 1&gt;2 else print(&quot;2&gt;1&quot;)
+</code></pre><h6 id="&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;">&#x4E00;&#x5143;&#x8FD0;&#x7B97;&#x7B26;</h6>
+<pre><code>del
+return
+global
+nonlocal
+</code></pre><h6 id="&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;">&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x7EA7;</h6>
+<pre><code>&#x7D22;&#x5F15;&#x8FD0;&#x7B97;&#x7B26;    x[index] &#x6216; x[index:index2[:index3]] 18&#x3001;19
+&#x5C5E;&#x6027;&#x8BBF;&#x95EE;    x.attrbute                              17
+&#x4E58;&#x65B9;    **                                            16
+&#x6309;&#x4F4D;&#x53D6;&#x53CD;    ~                                        15
+&#x7B26;&#x53F7;&#x8FD0;&#x7B97;&#x7B26;    +&#xFF08;&#x6B63;&#x53F7;&#xFF09;&#x6216; -&#xFF08;&#x8D1F;&#x53F7;&#xFF09;                   14
+&#x4E58;&#x3001;&#x9664;    *&#x3001;/&#x3001;//&#x3001;%                                    13
+&#x52A0;&#x3001;&#x51CF;    +&#x3001;-                                        12
+&#x4F4D;&#x79FB;    &gt;&gt;&#x3001;&lt;&lt;                                        11
+&#x6309;&#x4F4D;&#x4E0E;    &amp;                                            10
+&#x6309;&#x4F4D;&#x5F02;&#x6216;    ^                                       9
+&#x6309;&#x4F4D;&#x6216;    |                                           8
+&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;    ==&#x3001;!=&#x3001;&gt;&#x3001;&gt;=&#x3001;&lt;&#x3001;&lt;=                    7
+is &#x8FD0;&#x7B97;&#x7B26;    is&#x3001;is not                                6
+in &#x8FD0;&#x7B97;&#x7B26;    in&#x3001;not in                              5
+&#x903B;&#x8F91;&#x975E;    not                                            4
+&#x903B;&#x8F91;&#x4E0E;    and                                         3
+&#x903B;&#x8F91;&#x6216;    or                                         2
+</code></pre><h2 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;">&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h2>
+<h4 id="&#x5206;&#x652F;&#x8BED;&#x53E5;">&#x5206;&#x652F;&#x8BED;&#x53E5;</h4>
+<pre><code>if &#x6761;&#x4EF6;&#xFF1A;
+    &#x4EE3;&#x7801;&#x5757;
+elif &#x6761;&#x4EF6;2&#xFF1A;
+    &#x4EE3;&#x7801;&#x5757;
+else&#xFF1A;
+    &#x4EE3;&#x7801;&#x5757;
+</code></pre><h4 id="&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF08;&#x904D;&#x5386;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF09;">&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF08;&#x904D;&#x5386;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF09;</h4>
+<pre><code>for 
+while
+while &#x6761;&#x4EF6;&#xFF1A;
+    pass
+
+arr=[1,2,3,4,5,6]
+
+for item in arr:
+    print(item)
+
+arr=range(1,100,1) #&#x751F;&#x6210;&#x751F;&#x6210;&#x5668;&#xFF0C;range&#xFF08;&#x904D;&#x5386;&#x5BF9;&#x8C61;&#xFF0C;&#x8FED;&#x4EE3;&#x9012;&#x589E;)
+print(list(arr))
+
+for i in range(0,10):
+    print(i)
+
+break continue
+
+for i in range(0,10)
+    print(i)
+    if i==5:
+        break/continue
+else:
+    print(&quot;&#x7ED3;&#x675F;&quot;)
+</code></pre><h2 id="&#x63A8;&#x5BFC;&#x5F0F;">&#x63A8;&#x5BFC;&#x5F0F;</h2>
+<p>&#x5206;&#x7C7B;&#xFF1A;</p>
+<ol>
+<li>&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x5F0F;</li>
+</ol>
+<pre><code>arr = [1,2,3,4,5,6]
+arr1 = []
+for item in arr:
+    arr1.append(item**2)
+arr1=[item**2 fot item in arr]
+</code></pre><ol>
+<li>&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;<pre><code>d1
+</code></pre></li>
+<li>&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;</li>
+</ol>
+<h2 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h2>
+<h4 id="&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;">&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</h4>
+<pre><code>def &#x51FD;&#x6570;&#x540D;([&#x5F62;&#x53C2;]...)&#xFF1A;
+    &#x51FD;&#x6570;&#x4F53;
+    [return &#x8FD4;&#x56DE;&#x503C;]
+</code></pre><h4 id="&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;">&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;</h4>
+<pre><code>&#x51FD;&#x6570;&#x540D;([&#x5B9E;&#x53C2;])
+</code></pre><h4 id="&#x53C2;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1A;">&#x53C2;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1A;</h4>
+<ol>
+<li>&#x5FC5;&#x9009;&#x53C2;&#x6570;</li>
+<li>&#x7F3A;&#x7701;&#x53C2;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;<br>&#x6CE8;&#x610F;&#xFF1A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x53EA;&#x521B;&#x5EFA;&#x4E00;&#x6B21;&#xFF0C;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x4E4B;&#x540E;
+```Python
+def fn(a,b=10):
+return a+b
+fn(20)</li>
+</ol>
+<h1 id="def-fnab">def fn(a,b):</h1>
+<h1 id="return-ab">return a+b</h1>
+<h1 id="res--fn2030">res = fn(20,30)</h1>
+<h1 id="printres">print(res)</h1>
+<p>def fn(a,b=[]):
+    b.append(a)
+    print(b)</p>
+<h1 id="fn20-20">fn(20) #[20]</h1>
+<h1 id="fn30">fn(30)</h1>
+<h1 id="fn40">fn(40)</h1>
+<p>fn(10,[])
+fn(20,[])
+fn(30,[])</p>
+<pre><code>3. &#x53EF;&#x53D8;&#x53C2;&#x6570;
+</code></pre><p>def fn(*arg):
+    pass</p>
+<pre><code>```
+def mysum(a,b,*args):
+    print(a,b,args)
+</code></pre><ol>
+<li>&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
+```Python
+def getUserInfo(**kwargs):
+ print(keargs)
+getUserInfo(age=19,sex12)</li>
+</ol>
+<p>&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF1A;
+&#x5FC5;&#x9009;&#x53C2;&#x6570;&gt;&#x7F3A;&#x7701;&#x53C2;&#x6570;&gt;&#x53EF;&#x53D8;&#x53C2;&#x6570;&gt;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</p>
+<pre><code>5. &#x89E3;&#x5305;
+</code></pre><p>def fn(a,b,c)
+    print(a,b,c)</p>
+<p>t=[10,20,30]
+fn(*t)</p>
+<p>fn(&quot;xb&quot;,19)
+d1={&apos;name&apos;:&apos;xb&apos;,&apos;age&apos;:&apos;19&apos;}
+fn(**d1)</p>
+<pre><code>#### &#x8FD4;&#x56DE;&#x503C;&#x7528;&#x6CD5;
+</code></pre><p>def fn():
+    return 1,2,3,4,5
+res = fn()
+a,b,c,d,e = fn()
+print(res,a,b,c,d,e)</p>
+<pre><code>&#x540D;&#x8BCD;&#x89E3;&#x91CA;
+&#x95ED;&#x5305;&#xFF1A;&#x4E24;&#x4E2A;&#x53D1;&#x751F;&#x5D4C;&#x5957;&#x5173;&#x7CFB;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x65F6;&#x53D1;&#x751F;&#x95ED;&#x5305;&#x3002;&#x4FDD;&#x62A4;&#x6570;&#x636E;
+</code></pre><p>def fn():
+    arr=[]
+    def newFn(a):
+        arr.append(a)
+        print(arr)
+    return newFn</p>
+<p>newFn = fn()
+newFn(1)
+newFn(2)
+newFn(3)
+newFn(4)</p>
+<pre><code>&#x9AD8;&#x9636;&#x51FD;&#x6570; &#x67EF;&#x91CC;&#x5316;
+</code></pre><p>mysum(1)(2)(3)</p>
+<p>def mysum(a):
+    def mysum(b):
+        def mysum(c):
+            return a+b+c
+        return mysum3
+    return mysum2</p>
+<p>res = mysum(10)(20)(30)
+print(res)</p>
+<pre><code>&#x9012;&#x5F52;&#xFF1A;
+</code></pre><p>def jc(num):
+    if num==1:
+        return 1
+    else:
+        return num*jc(num-1)</p>
+<p>def jc(num):
+    return 1 if num==1 else num*jc(num-1)</p>
+<pre><code>
+
+
+
+#### &#x88C5;&#x9970;&#x5668;
+&#x529F;&#x80FD;&#xFF1A;&#x7ED9;&#x539F;&#x51FD;&#x6570;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x529F;&#x80FD;  
+&#x7279;&#x70B9;&#xFF0C;&#x539F;&#x5219;&#xFF1A;
+1. &#x4E0D;&#x6539;&#x53D8;&#x539F;&#x51FD;&#x6570;
+2. &#x4E0D;&#x6539;&#x53D8;&#x539F;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;
+3. &#x540C;&#x65F6;&#x6EE1;&#x8DB3;1&#xFF0C;2&#x6761;&#x4EF6;
+```Python
+import time
+def fn():
+    time.sleep(1)
+    print(&quot;hello world&quot;)
+def fn1():
+    time.sleep(1)
+    print(&quot;hello&quot;)
+def fn2(fn):
+    def newFn():
+        start = time.time()
+        fn()
+        end = time.time()
+        print(f&quot;&#x603B;&#x65F6;&#x95F4;&#x4E3A;:{end-start}&quot;)
+    return newFn
+fn=fn2(fn)
+fn1=fn2(fn1)
+fn()
+fn1()
+</code></pre><p>&#x4E07;&#x80FD;&#x4F20;&#x53C2;</p>
+<pre><code>staus = 0 #&#x6CA1;&#x6709;&#x767B;&#x9646; 1 &#x767B;&#x5F55;
+
+def login():
+    global staus
+    print(&quot;&#x767B;&#x5F55;&#x9875;&#x9762;&quot;)
+    username = input(&quot;&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&quot;) #str
+    password = input(&quot;&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;&quot;)
+    if username == &quot;123&quot; and password==&quot;123456&quot;:
+        staus = 1
+        print(&quot;&#x767B;&#x5F55;&#x6210;&#x529F;&quot;)
+    else:
+        print(&quot;&#x767B;&#x5F55;&#x5931;&#x8D25;&quot;)
+
+
+def authLogin(fn):
+    def newFn(*args,**kwargs):#&#x4E07;&#x80FD;&#x4F20;&#x53C2;
+        if staus == 1:
+            fn(*args,**kwargs)
+        else:
+            login()
+    return newFn
+
+@authLogin
+def fn1(id):
+    print(&quot;&#x6210;&#x7EE9;&#x67E5;&#x770B;&#x9875;&#x9762;%s&quot;%id)
+@authLogin
+def fn2(id):
+    print(&quot;&#x8BFE;&#x7A0B;&#x67E5;&#x770B;&#x9875;&#x9762;%s&quot;%id)
+
+login()
+fn1(10)
+fn2(10)
+</code></pre><h4 id="&#x4F5C;&#x7528;&#x57DF;">&#x4F5C;&#x7528;&#x57DF;</h4>
+<p>global&#x5168;&#x5C40;<br>local&#x5C40;&#x90E8;<br>nonlocal&#x975E;&#x5C40;&#x90E8;</p>
+<pre><code>name = &apos;&#x5C0F;&#x767D;&apos;
+def fn():
+    # global name
+    name = &apos;&#x5C0F;&#x7EA2;&apos;
+    print(name)
+    def newFn():
+        # global name
+        nonlocal name#&#x975E;&#x5C40;&#x90E8;
+        name=&quot;&#x5C0F;&#x9ED1;&quot;
+        print(name)
+    newFn()
+    print(name)
+fn()
+print(name)
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mysql安装.html" class="navigation navigation-prev " aria-label="Previous page: mysql安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="前端开发.html" class="navigation navigation-next " aria-label="Next page: 前端开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"python基础语法","level":"1.7","depth":1,"next":{"title":"前端开发","level":"1.8","depth":1,"path":"前端开发.md","ref":"./前端开发.md","articles":[]},"previous":{"title":"mysql安装","level":"1.6","depth":1,"path":"mysql安装.md","ref":"./mysql安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python基础语法.md","mtime":"2019-10-17T10:01:06.547Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-17T10:45:24.850Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
