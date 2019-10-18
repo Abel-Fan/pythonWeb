@@ -535,115 +535,124 @@ arr1=[item**2 fot item in arr]
 </code></pre><h4 id="&#x53C2;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1A;">&#x53C2;&#x6570;&#x7684;&#x7528;&#x6CD5;&#xFF1A;</h4>
 <ol>
 <li>&#x5FC5;&#x9009;&#x53C2;&#x6570;</li>
-<li>&#x7F3A;&#x7701;&#x53C2;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;<br>&#x6CE8;&#x610F;&#xFF1A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x53EA;&#x521B;&#x5EFA;&#x4E00;&#x6B21;&#xFF0C;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x4E4B;&#x540E;
-```Python
-def fn(a,b=10):
-return a+b
-fn(20)</li>
+<li>&#x7F3A;&#x7701;&#x53C2;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;<br>&#x6CE8;&#x610F;&#xFF1A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x53EA;&#x521B;&#x5EFA;&#x4E00;&#x6B21;&#xFF0C;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x653E;&#x5728;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x4E4B;&#x540E;</li>
 </ol>
-<h1 id="def-fnab">def fn(a,b):</h1>
-<h1 id="return-ab">return a+b</h1>
-<h1 id="res--fn2030">res = fn(20,30)</h1>
-<h1 id="printres">print(res)</h1>
-<p>def fn(a,b=[]):
+<pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fn</span><span class="hljs-params">(a,b=<span class="hljs-number">10</span>)</span>:</span>
+    <span class="hljs-keyword">return</span> a+b
+fn(<span class="hljs-number">20</span>)
+
+<span class="hljs-comment"># def fn(a,b):</span>
+<span class="hljs-comment">#     return a+b</span>
+<span class="hljs-comment"># res = fn(20,30)</span>
+<span class="hljs-comment"># print(res)</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fn</span><span class="hljs-params">(a,b=[])</span>:</span>
     b.append(a)
-    print(b)</p>
-<h1 id="fn20-20">fn(20) #[20]</h1>
-<h1 id="fn30">fn(30)</h1>
-<h1 id="fn40">fn(40)</h1>
-<p>fn(10,[])
-fn(20,[])
-fn(30,[])</p>
-<pre><code>3. &#x53EF;&#x53D8;&#x53C2;&#x6570;
-</code></pre><p>def fn(*arg):
-    pass</p>
-<pre><code>```
-def mysum(a,b,*args):
+    print(b)
+<span class="hljs-comment"># fn(20) #[20]</span>
+<span class="hljs-comment"># fn(30)</span>
+<span class="hljs-comment"># fn(40)</span>
+fn(<span class="hljs-number">10</span>,[])
+fn(<span class="hljs-number">20</span>,[])
+fn(<span class="hljs-number">30</span>,[])
+</code></pre>
+<ol>
+<li>&#x53EF;&#x53D8;&#x53C2;&#x6570;</li>
+</ol>
+<pre><code>def fn(*arg):
+    pass
+</code></pre><pre><code>def mysum(a,b,*args):
     print(a,b,args)
 </code></pre><ol>
-<li>&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
-```Python
-def getUserInfo(**kwargs):
- print(keargs)
-getUserInfo(age=19,sex12)</li>
+<li>&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</li>
 </ol>
-<p>&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF1A;
-&#x5FC5;&#x9009;&#x53C2;&#x6570;&gt;&#x7F3A;&#x7701;&#x53C2;&#x6570;&gt;&#x53EF;&#x53D8;&#x53C2;&#x6570;&gt;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</p>
-<pre><code>5. &#x89E3;&#x5305;
-</code></pre><p>def fn(a,b,c)
-    print(a,b,c)</p>
-<p>t=[10,20,30]
-fn(*t)</p>
-<p>fn(&quot;xb&quot;,19)
+<pre><code class="lang-Python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getUserInfo</span><span class="hljs-params">(**kwargs)</span>:</span>
+    print(keargs)
+getUserInfo(age=<span class="hljs-number">19</span>,sex12)
+
+&#x53C2;&#x6570;&#x987A;&#x5E8F;&#xFF1A;
+&#x5FC5;&#x9009;&#x53C2;&#x6570;&gt;&#x7F3A;&#x7701;&#x53C2;&#x6570;&gt;&#x53EF;&#x53D8;&#x53C2;&#x6570;&gt;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;
+</code></pre>
+<ol>
+<li>&#x89E3;&#x5305;</li>
+</ol>
+<pre><code>def fn(a,b,c)
+    print(a,b,c)
+
+t=[10,20,30]
+fn(*t)
+
+fn(&quot;xb&quot;,19)
 d1={&apos;name&apos;:&apos;xb&apos;,&apos;age&apos;:&apos;19&apos;}
-fn(**d1)</p>
-<pre><code>#### &#x8FD4;&#x56DE;&#x503C;&#x7528;&#x6CD5;
-</code></pre><p>def fn():
+fn(**d1)
+</code></pre><h4 id="&#x8FD4;&#x56DE;&#x503C;&#x7528;&#x6CD5;">&#x8FD4;&#x56DE;&#x503C;&#x7528;&#x6CD5;</h4>
+<pre><code>def fn():
     return 1,2,3,4,5
 res = fn()
 a,b,c,d,e = fn()
-print(res,a,b,c,d,e)</p>
-<pre><code>&#x540D;&#x8BCD;&#x89E3;&#x91CA;
-&#x95ED;&#x5305;&#xFF1A;&#x4E24;&#x4E2A;&#x53D1;&#x751F;&#x5D4C;&#x5957;&#x5173;&#x7CFB;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x65F6;&#x53D1;&#x751F;&#x95ED;&#x5305;&#x3002;&#x4FDD;&#x62A4;&#x6570;&#x636E;
-</code></pre><p>def fn():
+print(res,a,b,c,d,e)
+</code></pre><p>&#x540D;&#x8BCD;&#x89E3;&#x91CA;
+&#x95ED;&#x5305;&#xFF1A;&#x4E24;&#x4E2A;&#x53D1;&#x751F;&#x5D4C;&#x5957;&#x5173;&#x7CFB;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x65F6;&#x53D1;&#x751F;&#x95ED;&#x5305;&#x3002;&#x4FDD;&#x62A4;&#x6570;&#x636E;</p>
+<pre><code>def fn():
     arr=[]
     def newFn(a):
         arr.append(a)
         print(arr)
-    return newFn</p>
-<p>newFn = fn()
+    return newFn
+
+newFn = fn()
 newFn(1)
 newFn(2)
 newFn(3)
-newFn(4)</p>
-<pre><code>&#x9AD8;&#x9636;&#x51FD;&#x6570; &#x67EF;&#x91CC;&#x5316;
-</code></pre><p>mysum(1)(2)(3)</p>
-<p>def mysum(a):
+newFn(4)
+</code></pre><p>&#x9AD8;&#x9636;&#x51FD;&#x6570; &#x67EF;&#x91CC;&#x5316;</p>
+<pre><code>mysum(1)(2)(3)
+
+def mysum(a):
     def mysum(b):
         def mysum(c):
             return a+b+c
         return mysum3
-    return mysum2</p>
-<p>res = mysum(10)(20)(30)
-print(res)</p>
-<pre><code>&#x9012;&#x5F52;&#xFF1A;
-</code></pre><p>def jc(num):
+    return mysum2
+
+res = mysum(10)(20)(30)
+print(res)
+</code></pre><p>&#x9012;&#x5F52;&#xFF1A;</p>
+<pre><code>def jc(num):
     if num==1:
         return 1
     else:
-        return num*jc(num-1)</p>
-<p>def jc(num):
-    return 1 if num==1 else num*jc(num-1)</p>
-<pre><code>
+        return num*jc(num-1)
 
-
-
-#### &#x88C5;&#x9970;&#x5668;
-&#x529F;&#x80FD;&#xFF1A;&#x7ED9;&#x539F;&#x51FD;&#x6570;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x529F;&#x80FD;  
-&#x7279;&#x70B9;&#xFF0C;&#x539F;&#x5219;&#xFF1A;
-1. &#x4E0D;&#x6539;&#x53D8;&#x539F;&#x51FD;&#x6570;
-2. &#x4E0D;&#x6539;&#x53D8;&#x539F;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;
-3. &#x540C;&#x65F6;&#x6EE1;&#x8DB3;1&#xFF0C;2&#x6761;&#x4EF6;
-```Python
-import time
-def fn():
-    time.sleep(1)
-    print(&quot;hello world&quot;)
-def fn1():
-    time.sleep(1)
-    print(&quot;hello&quot;)
-def fn2(fn):
-    def newFn():
+def jc(num):
+    return 1 if num==1 else num*jc(num-1)
+</code></pre><h4 id="&#x88C5;&#x9970;&#x5668;">&#x88C5;&#x9970;&#x5668;</h4>
+<p>&#x529F;&#x80FD;&#xFF1A;&#x7ED9;&#x539F;&#x51FD;&#x6570;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x529F;&#x80FD;<br>&#x7279;&#x70B9;&#xFF0C;&#x539F;&#x5219;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x51FD;&#x6570;</li>
+<li>&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;</li>
+<li>&#x540C;&#x65F6;&#x6EE1;&#x8DB3;1&#xFF0C;2&#x6761;&#x4EF6;</li>
+</ol>
+<pre><code class="lang-Python"><span class="hljs-keyword">import</span> time
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fn</span><span class="hljs-params">()</span>:</span>
+    time.sleep(<span class="hljs-number">1</span>)
+    print(<span class="hljs-string">&quot;hello world&quot;</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fn1</span><span class="hljs-params">()</span>:</span>
+    time.sleep(<span class="hljs-number">1</span>)
+    print(<span class="hljs-string">&quot;hello&quot;</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fn2</span><span class="hljs-params">(fn)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newFn</span><span class="hljs-params">()</span>:</span>
         start = time.time()
         fn()
         end = time.time()
-        print(f&quot;&#x603B;&#x65F6;&#x95F4;&#x4E3A;:{end-start}&quot;)
-    return newFn
+        print(f<span class="hljs-string">&quot;&#x603B;&#x65F6;&#x95F4;&#x4E3A;:{end-start}&quot;</span>)
+    <span class="hljs-keyword">return</span> newFn
 fn=fn2(fn)
 fn1=fn2(fn1)
 fn()
 fn1()
-</code></pre><p>&#x4E07;&#x80FD;&#x4F20;&#x53C2;</p>
+</code></pre>
+<p>&#x4E07;&#x80FD;&#x4F20;&#x53C2;</p>
 <pre><code>staus = 0 #&#x6CA1;&#x6709;&#x767B;&#x9646; 1 &#x767B;&#x5F55;
 
 def login():
@@ -735,7 +744,7 @@ print(name)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"python基础语法","level":"1.7","depth":1,"next":{"title":"前端开发","level":"1.8","depth":1,"path":"前端开发.md","ref":"./前端开发.md","articles":[]},"previous":{"title":"mysql安装","level":"1.6","depth":1,"path":"mysql安装.md","ref":"./mysql安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python基础语法.md","mtime":"2019-10-17T10:01:06.547Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-17T10:45:24.850Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"python基础语法","level":"1.7","depth":1,"next":{"title":"前端开发","level":"1.8","depth":1,"path":"前端开发.md","ref":"./前端开发.md","articles":[]},"previous":{"title":"mysql安装","level":"1.6","depth":1,"path":"mysql安装.md","ref":"./mysql安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python基础语法.md","mtime":"2019-10-18T01:14:52.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-18T01:19:45.299Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
